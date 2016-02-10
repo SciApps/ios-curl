@@ -7,6 +7,7 @@
 //
 
 #import "CURLConnection.h"
+#import "UtilMacros.h"
 #import "curl.h"
 
 #define CURL_MAKE_CODE(cdx) {cdx, #cdx, NULL}
