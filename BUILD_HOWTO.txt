@@ -2,8 +2,8 @@ DEVICE
 
 export IPHONEOS_DEPLOYMENT_TARGET="7.0"
 export CC="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
-export CFLAGS="-arch armv7 -pipe -Os -gdwarf-2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk -I.. -DHAVE_SOCKET -DHAVE_FCNTL_O_NONBLOCK"
-export LDFLAGS="-arch armv7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk"
+export CFLAGS="-arch armv7 -pipe -Os -fembed-bitcode -gdwarf-2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk -I.. -DHAVE_SOCKET -DHAVE_FCNTL_O_NONBLOCK"
+export LDFLAGS="-arch armv7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk"
 ./configure --disable-shared --enable-static --host="armv7-apple-darwin" --prefix=/usr-iphone/local --with-darwinssl --enable-threaded-resolver
 make -j `sysctl -n hw.logicalcpu_max`
 
@@ -11,9 +11,9 @@ armv7, armv7s, arm64 (aarch64-apple-darwin)
 
 SIMULATOR
 
-export CFLAGS="-arch i386 -pipe -Os -gdwarf-2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.4.sdk -I.. -DHAVE_SOCKET -DHAVE_FCNTL_O_NONBLOCK"
-export CPPFLAGS="-D__IPHONE_OS_VERSION_MIN_REQUIRED=${IPHONEOS_DEPLOYMENT_TARGET%%.*}0000"
-export LDFLAGS="-arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.4.sdk"
+export CFLAGS="-arch i386 -pipe -Os -fembed-bitcode -gdwarf-2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.2.sdk -I.. -DHAVE_SOCKET -DHAVE_FCNTL_O_NONBLOCK"
+export CPPFLAGS="-fembed-bitcode -D__IPHONE_OS_VERSION_MIN_REQUIRED=${IPHONEOS_DEPLOYMENT_TARGET%%.*}0000"
+export LDFLAGS="-arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.2.sdk"
 ./configure --disable-shared --enable-static --host="i386-apple-darwin" --prefix=/usr-iphone/local --with-darwinssl --enable-threaded-resolver
 
 i386, x86_64
