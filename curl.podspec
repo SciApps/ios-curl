@@ -122,8 +122,8 @@ Pod::Spec.new do |s|
   # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
-  s.library   = "z"
-  # s.libraries = "iconv", "xml2"
+  # s.library   = "z"
+  s.libraries = "z", "curl-ios"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
