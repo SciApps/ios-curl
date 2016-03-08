@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "*.{h,m}", "include/*.h"
   s.preserve_paths = 'lib/libcurl-ios.a'
-  s.library = 'curl-ios'
+  #s.library = 'curl-ios'
   s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/curl/lib"' }
   # s.exclude_files = "Classes/Exclude"
 
