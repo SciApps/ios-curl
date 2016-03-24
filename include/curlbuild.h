@@ -174,30 +174,30 @@
 typedef CURL_TYPEOF_CURL_SOCKLEN_T curl_socklen_t;
 
 /* Signed integral data type used for curl_off_t. */
-#define CURL_TYPEOF_CURL_OFF_T long long
+#define CURL_TYPEOF_CURL_OFF_T long
 
 /* Data type definition of curl_off_t. */
 typedef CURL_TYPEOF_CURL_OFF_T curl_off_t;
 
 /* curl_off_t formatting string directive without "%" conversion specifier. */
-#define CURL_FORMAT_CURL_OFF_T "lld"
+#define CURL_FORMAT_CURL_OFF_T "ld"
 
 /* unsigned curl_off_t formatting string without "%" conversion specifier. */
-#define CURL_FORMAT_CURL_OFF_TU "llu"
+#define CURL_FORMAT_CURL_OFF_TU "lu"
 
 /* curl_off_t formatting string directive with "%" conversion specifier. */
-#define CURL_FORMAT_OFF_T "%lld"
+#define CURL_FORMAT_OFF_T "%ld"
 
 /* The size of `curl_off_t', as computed by sizeof. */
 #define CURL_SIZEOF_CURL_OFF_T 8
 
 /* curl_off_t constant suffix. */
-#define CURL_SUFFIX_CURL_OFF_T LL
+#define CURL_SUFFIX_CURL_OFF_T L
 
 /* unsigned curl_off_t constant suffix. */
-#define CURL_SUFFIX_CURL_OFF_TU ULL
+#define CURL_SUFFIX_CURL_OFF_TU UL
 
-#else	/* __LP64__ */
+#else /* __LP64__ */
 
 /* Configure process defines this to 1 when it finds out that system  */
 /* header file ws2tcpip.h must be included by the external interface. */
