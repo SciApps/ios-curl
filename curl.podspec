@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "curl"
-  s.version      = "7.48.0"
+  s.version      = "7.49.1"
   s.summary      = "CURL for iOS"
 
   # This description is used to generate tags and improve search results.
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://dev.server/stash/scm/~robert.balint/curl-bin.git", :tag => "7.48.0" }
+  s.source       = { :git => "http://dev.server/stash/scm/~robert.balint/curl-bin.git", :tag => "7.49.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

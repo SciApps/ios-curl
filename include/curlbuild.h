@@ -112,8 +112,6 @@
 /*  EXTERNAL INTERFACE SETTINGS FOR CONFIGURE CAPABLE SYSTEMS ONLY  */
 /* ================================================================ */
 
-#ifdef __LP64__
-
 /* Configure process defines this to 1 when it finds out that system  */
 /* header file ws2tcpip.h must be included by the external interface. */
 /* #undef CURL_PULL_WS2TCPIP_H */
@@ -160,6 +158,8 @@
 #ifdef CURL_PULL_SYS_POLL_H
 #  include <sys/poll.h>
 #endif
+
+#ifdef __LP64__
 
 /* The size of `long', as computed by sizeof. */
 #define CURL_SIZEOF_LONG 8
@@ -198,53 +198,6 @@ typedef CURL_TYPEOF_CURL_OFF_T curl_off_t;
 #define CURL_SUFFIX_CURL_OFF_TU UL
 
 #else /* __LP64__ */
-
-/* Configure process defines this to 1 when it finds out that system  */
-/* header file ws2tcpip.h must be included by the external interface. */
-/* #undef CURL_PULL_WS2TCPIP_H */
-#ifdef CURL_PULL_WS2TCPIP_H
-#  ifndef WIN32_LEAN_AND_MEAN
-#    define WIN32_LEAN_AND_MEAN
-#  endif
-#  include <windows.h>
-#  include <winsock2.h>
-#  include <ws2tcpip.h>
-#endif
-
-/* Configure process defines this to 1 when it finds out that system   */
-/* header file sys/types.h must be included by the external interface. */
-#define CURL_PULL_SYS_TYPES_H 1
-#ifdef CURL_PULL_SYS_TYPES_H
-#  include <sys/types.h>
-#endif
-
-/* Configure process defines this to 1 when it finds out that system */
-/* header file stdint.h must be included by the external interface.  */
-/* #undef CURL_PULL_STDINT_H */
-#ifdef CURL_PULL_STDINT_H
-#  include <stdint.h>
-#endif
-
-/* Configure process defines this to 1 when it finds out that system  */
-/* header file inttypes.h must be included by the external interface. */
-/* #undef CURL_PULL_INTTYPES_H */
-#ifdef CURL_PULL_INTTYPES_H
-#  include <inttypes.h>
-#endif
-
-/* Configure process defines this to 1 when it finds out that system    */
-/* header file sys/socket.h must be included by the external interface. */
-#define CURL_PULL_SYS_SOCKET_H 1
-#ifdef CURL_PULL_SYS_SOCKET_H
-#  include <sys/socket.h>
-#endif
-
-/* Configure process defines this to 1 when it finds out that system  */
-/* header file sys/poll.h must be included by the external interface. */
-/* #undef CURL_PULL_SYS_POLL_H */
-#ifdef CURL_PULL_SYS_POLL_H
-#  include <sys/poll.h>
-#endif
 
 /* The size of `long', as computed by sizeof. */
 #define CURL_SIZEOF_LONG 4
