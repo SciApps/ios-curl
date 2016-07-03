@@ -51,10 +51,10 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "robert.balint" => "robert.balint@incepteam.com" }
-  # Or just: s.author    = "robert.balint"
-  # s.authors            = { "robert.balint" => "robert.balint@incepteam.com" }
-  # s.social_media_url   = "http://twitter.com/robert.balint"
+  s.author             = { "mrnuku" => "mrnuku@gmail.com" }
+  # Or just: s.author    = "mrnuku"
+  # s.authors            = { "mrnuku" => "mrnuku@gmail.com" }
+  # s.social_media_url   = "http://twitter.com/mrnuku"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://dev.server/stash/scm/~robert.balint/curl-bin.git", :tag => "7.49.1" }
+  s.source       = { :git => "https://github.com/mrnuku/ios-curl.git", :tag => "7.49.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
